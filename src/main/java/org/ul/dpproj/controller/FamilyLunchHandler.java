@@ -39,26 +39,21 @@ public class FamilyLunchHandler {
     }
 
     @PostMapping("/addPart")
-    public void addPart(@RequestBody FamilyLunchMemento fl){
+    public List<FamilyLunchMemento> addPart(@RequestBody FamilyLunchMemento fl){
 
         o.setStaple(fl.getStaple());
         o.setSauce(fl.getSauce());
         o.setVegetable(fl.getVegetable());
         c.addFamilyLunch(o.createFamilyLunchMemento());
-        System.out.println(c);
-        System.out.println(o);
+        return c.getFamilyLunchList();
 
     }
 
     @PostMapping("/cancelPart")
-    public String cancelPart(){
+    public List<FamilyLunchMemento> cancelPart(){
         FamilyLunchMemento result = o.setFamilyLunchMemento(c.cancelFamilyLunch());
-        o.display();
-        if(result != null){
-            return "success";
-        }else{
-            return "error";
-        }
+
+        return c.getFamilyLunchList();
     }
 
 
