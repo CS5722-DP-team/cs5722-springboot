@@ -59,49 +59,4 @@ public class CoffeeHandler {
         list.add(coffee.order());
         return list;
     }
-
-
-
-
-
-
-
-
-
-
-//    @GetMapping("/findAll/{page}/{size}")
-//    public Page<Book> findAll(@PathVariable("page") Integer page, @PathVariable("size") Integer size){
-//        PageRequest request = PageRequest.of(page,size);
-//        return bookRepository.findAll(request);
-//    }
-
-//    @PostMapping("/save")
-//    public String save(@RequestBody Book book){
-//        Book result = bookRepository.save(book);
-//        if(result != null){
-//            return "success";
-//        }else{
-//            return "error";
-//        }
-//    }
-//
-//    @GetMapping("/findById/{id}")
-//    public Book findById(@PathVariable("id") Integer id){
-//        return bookRepository.findById(id).get();
-//    }
-//
-//    @PutMapping("/update")
-//    public String update(@RequestBody Book book){
-//        Book result = bookRepository.save(book);
-//        if(result != null){
-//            return "success";
-//        }else{
-//            return "error";
-//        }
-//    }
-//
-//    @DeleteMapping("/deleteById/{id}")
-//    public void deleteById(@PathVariable("id") Integer id){
-//        bookRepository.deleteById(id);
-//    }
 }
