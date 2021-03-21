@@ -1,4 +1,4 @@
-package org.ul.dpproj.repository;
+package org.ul.dpproj.repository.memento;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;

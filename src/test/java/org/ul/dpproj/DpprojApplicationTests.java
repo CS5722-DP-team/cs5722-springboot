@@ -7,7 +7,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.ul.dpproj.entity.Book;
 import org.ul.dpproj.repository.BookRepository;
-import org.ul.dpproj.repository.FamilyLunchStapleRepository;
+import org.ul.dpproj.repository.memento.FamilyLunchStapleRepository;
 
 @SpringBootTest
 class DpproApplicationTests {
