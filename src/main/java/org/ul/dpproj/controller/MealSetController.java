@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.ul.dpproj.entity.abstractFactory.*;
+import org.ul.dpproj.entity.command.Order;
+import org.ul.dpproj.entity.command.OrderCommand;
+import org.ul.dpproj.entity.command.Waitor;
 
 @RestController
 @RequestMapping("/mealset")
@@ -21,7 +24,6 @@ public class MealSetController {
 
     @GetMapping("/getmealset/{num}")
     public JSONObject getMealSet(@PathVariable("num") String num){
-        System.out.println("访问到了");
         Staple staple;
         Drink drink;
         Double price;
@@ -65,4 +67,23 @@ public class MealSetController {
         resp.put("price",price);
         return resp;*/
     }
+
+    @GetMapping("/handlemealset/{type1}/{num1}/{type2}/{num2}/{type3}/{num3}")
+    public String handleOrders(@PathVariable("type1")Integer type1,@PathVariable("num1")Integer num1,
+                                   @PathVariable("type2")Integer type2,@PathVariable("num2")Integer num2,
+                                   @PathVariable("type3")Integer type3,@PathVariable("num3")Integer num3){
+        Order order = new Order();
+        order.setFoodOrder(type1,num1);
+        order.setFoodOrder(type2,num2);
+        order.setFoodOrder(type3,num3);
+        Waitor waitor = new Waitor();
+        SnackFactory factory1 = new MealSetOneFactory();
+        OrderCommand orderCommand1 = new OrderCommand(factory1,order);
+        waitor.setCommand(orderCommand1);
+        waitor.orderUp();
+
+        return "success";
+    }
+
+
 }
