@@ -9,12 +9,12 @@ public class BurgerPartDisplayVisitor implements BurgerPartVisitor{
 
     @Override
     public void visit(Chicken chicken) {
-        System.out.println("Displaying Chicken");
+        System.out.println("Displaying Chicken:"+chicken.getSize());
     }
 
     @Override
     public void visit(Vegtable vegtable) {
-        System.out.println("Displaying Vegtable");
+        System.out.println("Displaying Vegtable:"+vegtable.getType());
     }
 
     @Override
