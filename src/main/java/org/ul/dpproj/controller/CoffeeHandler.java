@@ -43,7 +43,6 @@ public class CoffeeHandler {
         String cap = json.getString("capacity");
         ICoffeeAdditives add = null;
         Coffee coffee = null;
-
         if(additive.equals("WholeMilk")){
             add = new WholeMilk();
         }else {
