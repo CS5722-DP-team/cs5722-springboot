@@ -1,3 +1,4 @@
+/*
 package org.ul.dpproj.entity.visitor;
 
 public class Burger implements BurgerPart{
@@ -16,3 +17,4 @@ public class Burger implements BurgerPart{
         burgerPartVisitor.visit(this);
     }
 }
+*/

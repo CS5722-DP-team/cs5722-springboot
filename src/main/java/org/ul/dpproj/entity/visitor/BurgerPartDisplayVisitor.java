@@ -4,7 +4,7 @@ public class BurgerPartDisplayVisitor implements BurgerPartVisitor{
 
     @Override
     public void visit(Sop sop) {
-        System.out.println("Displaying Sop");
+        System.out.println("Displaying Sop:"+sop.getType());
     }
 
     @Override
@@ -17,8 +17,8 @@ public class BurgerPartDisplayVisitor implements BurgerPartVisitor{
         System.out.println("Displaying Vegtable:"+vegtable.getType());
     }
 
-    @Override
+/*    @Override
     public void visit(Burger burger) {
         System.out.println("Displaying Burger");
-    }
+    }*/
 }
