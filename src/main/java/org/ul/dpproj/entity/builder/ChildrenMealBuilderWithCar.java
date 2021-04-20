@@ -1,23 +1,30 @@
 package org.ul.dpproj.entity.builder;
 
 public class ChildrenMealBuilderWithCar extends ChildrenMealBuilder{
-    private ChildrenMeal childrenMeal;
-    public ChildrenMealBuilderWithCar(String food, String drink, String vegetable){
-        childrenMeal = new ChildrenMeal(food,drink,vegetable);
-
+    private ChildrenMeal childrenMeal = new ChildrenMealWithCar();
+    @Override
+    public ChildrenMealBuilder buildToy() {
+        childrenMeal.setToy();
+        return this;
     }
     @Override
-    public void setToy() {
-        childrenMeal.setToy("Toy Car");
+    public ChildrenMealBuilder buildFood(String food) {
+        childrenMeal.setFood(food);
+        return this;
+    }
+    @Override
+    public ChildrenMealBuilder buildDrink(String drink) {
+        childrenMeal.setDrink(drink);
+        return this;
+    }
+    @Override
+    public ChildrenMealBuilder buildVegetable(String vegetable) {
+        childrenMeal.setVegetable(vegetable);
+        return this;
     }
 
     @Override
-    public void setBook() {
-        childrenMeal.setBook("Book Car");
-    }
-
-    @Override
-    public ChildrenMeal getMeal() {
-        return this.childrenMeal;
+    public ChildrenMeal build() {
+        return childrenMeal;
     }
 }

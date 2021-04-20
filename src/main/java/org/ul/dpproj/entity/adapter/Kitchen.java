@@ -6,5 +6,4 @@ public class Kitchen {
     public String isKitchen(){
         return "A Kitchen";
     }
-
 }

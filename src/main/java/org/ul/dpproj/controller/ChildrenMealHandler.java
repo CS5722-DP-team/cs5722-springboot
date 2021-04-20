@@ -43,7 +43,6 @@ public class ChildrenMealHandler {
     @PostMapping("/addChildrenMeal")
     public List<JSONObject> addPart(@RequestBody JSONObject json) {
 
-        ChildrenMealDirector director = new ChildrenMealDirector();
         ChildrenMealBuilder builder;
 
         String toy = json.getString("toy");
@@ -52,12 +51,12 @@ public class ChildrenMealHandler {
         String vegetable = json.getString("vegetable");
 
         if (toy.equals("Car")) {
-            builder = new ChildrenMealBuilderWithCar(food, drink, vegetable);
+            builder = new ChildrenMealBuilderWithCar();
         } else {
-            builder = new ChildrenMealBuilderWithPlane(food, drink, vegetable);
+            builder = new ChildrenMealBuilderWithPlane();
         }
-        director.makeMeal(builder);
-        ChildrenMeal meal = builder.getMeal();
+        ChildrenMealDirector director = new ChildrenMealDirector(builder);
+        ChildrenMeal meal =director.construct(food,drink,vegetable);
 
         JSONObject resp = new JSONObject();
         resp.put("toy",meal.getToy());
