@@ -1,0 +1,13 @@
+package org.ul.dpproj.entity.adapter;
+
+public class classAdapter extends Food {
+    private FoodType food;
+    public Adapter(FoodType food){
+        this.food = food;
+    }
+    @Override
+    public String isFood(){
+        return super.isFood();
+    }
+
+}
