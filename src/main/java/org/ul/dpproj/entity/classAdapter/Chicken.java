@@ -1,3 +1,4 @@
+/*
 package org.ul.dpproj.entity.adapter;
 
 
@@ -16,3 +17,4 @@ public class Food {
     private Integer id;
     private String name;
 }
+*/

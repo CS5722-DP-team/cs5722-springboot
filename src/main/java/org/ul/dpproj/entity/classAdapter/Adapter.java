@@ -1,3 +1,4 @@
+/*
 package org.ul.dpproj.entity.adapter;
 
 public class Adapter extends Kitchen {
@@ -11,3 +12,4 @@ public class Adapter extends Kitchen {
     }
 
 }
+*/

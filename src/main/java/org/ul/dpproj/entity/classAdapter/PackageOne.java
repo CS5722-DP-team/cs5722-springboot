@@ -1,3 +1,4 @@
+/*
 package org.ul.dpproj.entity.adapter;
 
 //Adaptee
@@ -7,3 +8,4 @@ public class Package implements FoodType{
         return "A ChildPackage ";
     }
 }
+*/

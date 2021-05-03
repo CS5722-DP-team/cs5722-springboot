@@ -1,3 +1,4 @@
+/*
 package org.ul.dpproj.entity.adapter;
 
 public class Coke implements FoodType{
@@ -7,3 +8,4 @@ public class Coke implements FoodType{
         return "A Coke ";
     }
 }
+*/
